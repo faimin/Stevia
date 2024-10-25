@@ -86,6 +86,11 @@ public extension UILayoutGuide {
     }
     
     constraint.isActive = true
+    
+    if let first = constraint.firstItem as? UIView {
+        first.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     return constraint
 }
 
@@ -116,6 +121,11 @@ public extension UILayoutGuide {
     }
     
     constraint.isActive = true
+    
+    if let first = constraint.firstItem as? UIView {
+        first.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     return constraint
 }
 

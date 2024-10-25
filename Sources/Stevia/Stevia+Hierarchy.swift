@@ -180,7 +180,6 @@ public extension UIView {
     func subviews(_ subViews: [UIView]) -> UIView {
         for sv in subViews {
             addSubview(sv)
-            sv.translatesAutoresizingMaskIntoConstraints = false
         }
         return self
     }

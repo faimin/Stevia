@@ -76,10 +76,13 @@ public extension UIView {
                        attribute attr2: NSLayoutConstraint.Attribute? = nil, // Not an attribute??
                        multiplier: Double = 1,
                        constant: Double = 0) -> NSLayoutConstraint {
-        let c =  NSLayoutConstraint(item: view1, attribute: attr1,
-                                  relatedBy: relatedBy,
-                                  toItem: view2, attribute: ((attr2 == nil) ? attr1 : attr2! ),
-                                  multiplier: CGFloat(multiplier), constant: CGFloat(constant))
+    if let first = view1 as? UIView {
+        first.translatesAutoresizingMaskIntoConstraints = false
+    }
+    let c =  NSLayoutConstraint(item: view1, attribute: attr1,
+                                relatedBy: relatedBy,
+                                toItem: view2, attribute: ((attr2 == nil) ? attr1 : attr2! ),
+                                multiplier: CGFloat(multiplier), constant: CGFloat(constant))
     c.priority = UILayoutPriority(rawValue: UILayoutPriority.defaultHigh.rawValue + 1)
     return c
 }
