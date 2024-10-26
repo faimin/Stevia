@@ -94,6 +94,89 @@ public extension UIView {
         fillHorizontally(padding: Double(padding))
     }
     
+    /**
+     Adds the constraints needed for the view to fill its `superview`.
+     A padding can be used to apply equal spaces between the view and its superview
+    */
+    @discardableResult
+    func fillContainer(margin: Double = 0) -> Self {
+        fillHorizontally(margin: margin)
+        fillVertically(margin: margin)
+        return self
+    }
+    
+    /**
+     Adds the constraints needed for the view to fill its `superview`.
+     A padding can be used to apply equal spaces between the view and its superview
+    */
+    @discardableResult
+    func fillContainer(margin: CGFloat) -> Self {
+        fillContainer(margin: Double(margin))
+    }
+    
+    /**
+     Adds the constraints needed for the view to fill its `superview`.
+     A padding can be used to apply equal spaces between the view and its superview
+    */
+    @discardableResult
+    func fillContainer(margin: Int) -> Self {
+        fillContainer(margin: Double(margin))
+    }
+    
+    /**
+     Adds the constraints needed for the view to fill its `superview` Vertically.
+     A padding can be used to apply equal spaces between the view and its superview
+     */
+    @discardableResult
+    func fillVertically(margin: Double = 0) -> Self {
+        fill(.vertical, points: margin)
+    }
+    
+    /**
+     Adds the constraints needed for the view to fill its `superview` Vertically.
+     A padding can be used to apply equal spaces between the view and its superview
+     */
+    @discardableResult
+    func fillVertically(margin: CGFloat) -> Self {
+        fillVertically(margin: Double(margin))
+    }
+    
+    /**
+     Adds the constraints needed for the view to fill its `superview` Vertically.
+     A padding can be used to apply equal spaces between the view and its superview
+     */
+    @discardableResult
+    func fillVertically(margin: Int) -> Self {
+        fillVertically(margin: Double(margin))
+    }
+            
+    /**
+     Adds the constraints needed for the view to fill its `superview` Horizontally.
+     A padding can be used to apply equal spaces between the view and its superview
+     */
+    @discardableResult
+    func fillHorizontally(margin: Double = 0) -> Self {
+        fill(.horizontal, points: margin)
+    }
+    
+    /**
+     Adds the constraints needed for the view to fill its `superview` Horizontally.
+     A padding can be used to apply equal spaces between the view and its superview
+     */
+    @discardableResult
+    func fillHorizontally(margin: CGFloat) -> Self {
+        fillHorizontally(margin: Double(margin))
+    }
+    
+    /**
+     Adds the constraints needed for the view to fill its `superview` Horizontally.
+     A padding can be used to apply equal spaces between the view and its superview
+     */
+    @discardableResult
+    func fillHorizontally(margin: Int) -> Self {
+        fillHorizontally(margin: Double(margin))
+    }
+    
     fileprivate func fill(_ axis: NSLayoutConstraint.Axis, points: Double = 0) -> Self {
         let a: NSLayoutConstraint.Attribute = axis == .vertical ? .top : .leading
         let b: NSLayoutConstraint.Attribute = axis == .vertical ? .bottom : .trailing
