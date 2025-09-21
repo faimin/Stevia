@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SteviaLayout'
-  s.version          = "6.2.1"
+  s.version          = "6.2.2"
   s.summary          = "Elegant view layout for iOS"
   s.homepage         = "https://github.com/freshOS/Stevia"
   s.license          = { :type => "MIT", :file => "LICENSE" }
@@ -9,8 +9,9 @@ Pod::Spec.new do |s|
                          :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/sachadso'
   s.source_files     = "Sources/Stevia/*.swift"
-  s.ios.deployment_target = "9"
-  s.tvos.deployment_target = "10.2"
+  s.ios.deployment_target = "12.0"
+  s.tvos.deployment_target = "12.0"
   s.description  = "Elegant view layout for iOS :leaves: - Auto layout code finally readable by a human being"
   s.module_name = 'Stevia'
+  s.swift_versions = ['6.0']
 end
