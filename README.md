@@ -312,3 +312,4 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 - Swift 5.0 -> [v**4.5.0**](https://github.com/freshOS/Stevia/releases/tag/4.5.0)
 - Swift 5.1 -> [v**4.7.2**](https://github.com/freshOS/Stevia/releases/tag/4.7.2)
 - Swift 5.1.2 -> [v**4.7.3**](https://github.com/freshOS/Stevia/releases/tag/4.7.3)
+- Swift 6.0 -> [v**6.2.0**](https://github.com/freshOS/Stevia/releases/tag/6.2.0)
